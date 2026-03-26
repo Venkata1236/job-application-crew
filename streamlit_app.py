@@ -1,3 +1,13 @@
+"""
+streamlit_app.py
+----------------
+Streamlit web UI for Job Application Crew.
+Run: python -m streamlit run streamlit_app.py
+Supports PDF, DOCX, TXT resume upload.
+"""
+
+
+
 import tempfile
 from pathlib import Path
 import os
