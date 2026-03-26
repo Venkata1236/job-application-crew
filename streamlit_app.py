@@ -1,9 +1,11 @@
 import tempfile
-import streamlit as st
 from pathlib import Path
-from dotenv import load_dotenv
+import os
+import streamlit as st
 
-load_dotenv()
+# works locally (.env) and on cloud (st.secrets)
+os.environ["OPENAI_API_KEY"] = st.secrets.get("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY", ""))
+
 
 from crew.job_crew import JobApplicationCrew
 

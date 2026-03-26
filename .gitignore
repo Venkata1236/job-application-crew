@@ -6,3 +6,4 @@ __pycache__/
 .svelte-kit/
 .DS_Store
 outputs/
+.streamlit/secrets.toml
