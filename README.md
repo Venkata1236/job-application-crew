@@ -1,6 +1,3 @@
-## `README.md`
-
-```markdown
 # 💼 Job Application Crew
 
 > 3-agent CrewAI crew — CV Analyzer + Job Matcher + Cover Letter Writer
