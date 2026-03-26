@@ -1,3 +1,11 @@
+"""
+cv_parser.py
+------------
+Extracts raw text from PDF, DOCX, or TXT resume files.
+Skill extraction is handled by the LLM agent — no hardcoded keywords.
+"""
+
+
 from pathlib import Path
 from typing import Dict
 
