@@ -1,3 +1,12 @@
+"""
+tools.py
+--------
+Custom CrewAI tool — CVReaderTool reads uploaded CV file
+and returns raw text + pre-processed summary to Agent 1.
+"""
+
+
+
 from typing import Type
 from pydantic import BaseModel
 from crewai.tools import BaseTool
