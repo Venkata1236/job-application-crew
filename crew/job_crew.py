@@ -15,8 +15,10 @@ load_dotenv()
 class JobApplicationCrew:
     """Orchestrates CV Analyzer + Job Matcher + Cover Letter Writer agents."""
 
-    agents_config = "config/agents.yaml"
-    tasks_config  = "config/tasks.yaml"
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    agents_config = os.path.join(BASE_DIR, "config", "agents.yaml")
+    tasks_config  = os.path.join(BASE_DIR, "config", "tasks.yaml")
+
 
     # ---------- LLM ----------
     def _llm(self) -> LLM:
