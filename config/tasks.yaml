@@ -1,3 +1,7 @@
+# Task definitions — sequential flow
+# cv_analysis_task → job_match_task → cover_letter_task
+
+
 cv_analysis_task:
   description: >
     Read the following CV text carefully and extract all relevant information.
