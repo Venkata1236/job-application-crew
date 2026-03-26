@@ -1,3 +1,13 @@
+"""
+job_crew.py
+-----------
+Core crew definition.
+Wires 3 agents (CV Analyst, Job Matcher, Cover Letter Writer)
+with sequential task execution using CrewAI framework.
+"""
+
+
+
 from __future__ import annotations
 
 import os
