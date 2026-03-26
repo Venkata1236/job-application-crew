@@ -1,3 +1,7 @@
+# Agent definitions for Job Application Crew
+# CV Analyst → Job Matcher → Cover Letter Writer
+
+
 cv_analyst:
   role: "Senior CV Analyst"
   goal: >
