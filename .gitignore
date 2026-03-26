@@ -5,3 +5,4 @@ __pycache__/
 .streamlit/
 .svelte-kit/
 .DS_Store
+outputs/
