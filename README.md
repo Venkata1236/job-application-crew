@@ -141,6 +141,7 @@ OPENAI_API_KEY = "your_openai_key"
 **Step 4 — Run:**
 ```bash
 python -m streamlit run streamlit_app.py
+
 python app.py
 ```
 
