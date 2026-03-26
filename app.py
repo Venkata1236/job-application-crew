@@ -1,3 +1,13 @@
+"""
+app.py
+------
+Terminal (CLI) interface for Job Application Crew.
+Run: python app.py
+Outputs saved to /outputs folder.
+"""
+
+
+
 import os
 import sys
 from pathlib import Path
