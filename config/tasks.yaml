@@ -1,0 +1,82 @@
+cv_analysis_task:
+  description: >
+    Read the following CV text carefully and extract all relevant information.
+
+    CV TEXT:
+    {cv_text}
+
+    Extract and return a structured summary with:
+    - Full name of the candidate
+    - Contact details (email, phone, LinkedIn if present)
+    - Technical and soft skills (ALL skills, not just tech)
+    - Work experience (company, role, duration, key achievements)
+    - Education (degree, institution, year)
+    - Certifications or courses completed
+    - Key strengths and standout qualities
+  expected_output: >
+    A clean structured summary in this format:
+
+    NAME: <full name>
+    CONTACT: <email | phone | LinkedIn>
+    SKILLS: <comma separated list of all skills>
+    EXPERIENCE:
+      - <Role> at <Company> (<Duration>) — <Key achievement>
+    EDUCATION:
+      - <Degree> from <Institution> (<Year>)
+    CERTIFICATIONS: <list>
+    STRENGTHS: <3-5 bullet points>
+
+job_match_task:
+  description: >
+    Using the CV summary from the previous task, compare it against
+    the following job description:
+
+    JOB DESCRIPTION:
+    {job_description}
+
+    Analyze how well the candidate fits this role.
+  expected_output: >
+    A detailed match report with:
+
+    FIT SCORE: <score>/100
+
+    MATCHING SKILLS & EXPERIENCE:
+      - <list what directly matches the job requirements>
+
+    MISSING SKILLS & GAPS:
+      - <list what is required but missing from the CV>
+
+    GAP ANALYSIS:
+      - <specific, actionable suggestions to close each gap>
+
+    OVERALL VERDICT:
+      <2-3 sentences on whether the candidate should apply and why>
+
+cover_letter_task:
+  description: >
+    Using the CV summary and the job match report from previous tasks,
+    write a tailored cover letter for the candidate.
+
+    Candidate name: {candidate_name}
+    Job description: {job_description}
+
+    The cover letter must:
+    - Be professional yet human in tone
+    - Highlight the top 3 matching strengths
+    - Address 1-2 gaps honestly with a growth mindset angle
+    - End with a confident call to action
+  expected_output: >
+    A complete, ready-to-send cover letter in markdown format:
+
+    Dear Hiring Manager,
+
+    [Opening paragraph — who the candidate is and why they are applying]
+
+    [Middle paragraph 1 — top matching skills and achievements]
+
+    [Middle paragraph 2 — addressing gaps with growth mindset]
+
+    [Closing paragraph — call to action, enthusiasm, availability]
+
+    Sincerely,
+    {candidate_name}
